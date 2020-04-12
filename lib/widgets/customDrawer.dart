@@ -13,7 +13,7 @@ class CustomDrawer extends StatelessWidget {
     decoration: BoxDecoration(
       gradient: LinearGradient(
         colors: [
-          Colors.red,
+          Colors.redAccent,
           Colors.white
         ],
         begin: Alignment.topCenter,
@@ -44,7 +44,8 @@ class CustomDrawer extends StatelessWidget {
                 Divider(color: Colors.white,),
                 DrawerTile(Icons.home, "Farmácia de Plantão no dia", pageController, 0),
                 DrawerTile(Icons.list, "Listar todas as farmácias", pageController, 1),
-                DrawerTile(Icons.info, "Sobre o aplicativo", pageController, 2),
+                DrawerTile(Icons.search, "Buscar por dia", pageController, 2),
+                DrawerTile(Icons.info, "Sobre o aplicativo", pageController, 3),
               ],
             )
         ],
