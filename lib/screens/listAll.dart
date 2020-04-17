@@ -78,51 +78,59 @@ class ListAll extends StatelessWidget {
                 ),
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.start, //change here don't //worked
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  FlatButton(
-                    onPressed: () {
-                      String tel = farmacia.telefone
-                          .substring(3);
-                      UrlLauncher.launch('tel:${tel}');
-                    },
-                    child: Row(
-                      children: <Widget>[
-                        Icon(
-                          Icons.phone,
-                          color: Colors.blue,
-                        ),
-                        SizedBox(width: 5,),
-                        Text("Ligar para farmacia",
-                          style: GoogleFonts.lato(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.blue),)
-                      ],
+                  Flexible(
+                    flex: 1,
+                    child: FlatButton(
+                      onPressed: () {
+                        String tel = farmacia.telefone
+                            .substring(3);
+                        UrlLauncher.launch('tel:${tel}');
+                      },
+                      child: Row(
+                        children: <Widget>[
+                          Icon(
+                            Icons.phone,
+                            color: Colors.blue,
+                          ),
+                          SizedBox(width: 5,),
+                          Text("Ligar",
+                            style: GoogleFonts.lato(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.blue),)
+                        ],
+                      ),
                     ),
                   ),
-                  FlatButton(
-                    onPressed: () {
-                      UrlLauncher.launch(
-                          'https://www.google.com/maps/search/?api=1&query=${farmacia
-                              .latitude},${farmacia
-                              .longitude}');
-                    },
-                    child: Row(
-                      children: <Widget>[
-                        Icon(
-                          Icons.map,
-                          color: Colors.blue,
-                        ),
-                        SizedBox(width: 5,),
-                        Text("Localização", style: GoogleFonts.lato(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.blue),)
-                      ],
+                  Flexible(
+                    flex: 1,
+                    child: FlatButton(
+                      onPressed: () {
+                        String tel = farmacia.telefone
+                            .substring(3);
+                        UrlLauncher.launch('https://www.google.com/maps/search/?api=1&query=${farmacia.latitude},${farmacia.longitude}');
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: <Widget>[
+                          Icon(
+                            Icons.map,
+                            color: Colors.blue,
+                          ),
+                          SizedBox(width: 5,),
+                          Text("Localização",
+                            style: GoogleFonts.lato(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.blue),
+                            textAlign: TextAlign.end,)
+                        ],
+                      ),
                     ),
                   ),
-
                 ],
               )
-
             ],
           ),
         ),

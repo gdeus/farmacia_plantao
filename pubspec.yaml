@@ -27,10 +27,20 @@ dependencies:
   url_launcher: ^5.4.2
   google_fonts: ^0.4.0
   flutter_datetime_picker: ^1.3.5
+  flutter_launcher_icons: ^0.7.3
+
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+flutter_icons:
+  android: "laucher_icon"
+  ios: true
+  image_path: "images/icone.png"
+
+
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -54,6 +64,7 @@ flutter:
     - images/farmaVitta.png
     - images/bioetica.png
     - images/farmaVida.png
+    - images/icone.png
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
