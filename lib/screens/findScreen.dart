@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart' as UrlLauncher;
+import 'package:intl/intl.dart';
 
 class FindScreen extends StatefulWidget {
   @override
@@ -20,9 +21,13 @@ class _FindScreenState extends State<FindScreen> {
   List<Plantao> listaPlantaoAux;
   @override
   Widget build(BuildContext context) {
+    var formatada = DateFormat('yyyy-MM-dd');
+    String dataFormatada = formatada.format(data);
+    DateTime dataMesmoAgora = DateTime.parse(dataFormatada);
     double altura = MediaQuery.of(context).size.height * 0.5;
+
     bool isToday(DateTime date) {
-      final diff = data
+      final diff = dataMesmoAgora
           .difference(date)
           .inDays;
       if (diff == 0) {

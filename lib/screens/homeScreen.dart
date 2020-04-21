@@ -4,6 +4,7 @@ import 'package:farmaciaplantao/service/Service.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart' as UrlLauncher;
 import 'package:google_fonts/google_fonts.dart';
+import 'package:intl/intl.dart';
 
 class HomeScreen extends StatelessWidget {
   final pageController = PageController();
@@ -15,10 +16,15 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var formatada = DateFormat('yyyy-MM-dd');
+    String dataFormatada = formatada.format(dataDeHoje);
+    DateTime dataMesmoAgora = DateTime.parse(dataFormatada);
     double altura = MediaQuery.of(context).size.height * 0.5;
+
     bool isToday(DateTime data) {
-      final diff = dataDeHoje.difference(data).inDays;
+      final diff = dataMesmoAgora.difference(data).inDays;
       if (diff == 0) {
+        print("amigo estou aqui!!");
         return true;
       } else {
         return false;
@@ -26,13 +32,9 @@ class HomeScreen extends StatelessWidget {
     }
 
     List<Plantao> listaPlantao = service.criaListaPlantao();
-    listaPlantaoAux = listaPlantao
-        .where((element) =>
-            (element.fim.isAfter(dataDeHoje) &&
-                element.inicio.isBefore(dataDeHoje)) ||
-            isToday(element.inicio) ||
-            isToday(element.fim))
-        .toList();
+    listaPlantaoAux = listaPlantao.where((element) => (element.fim.isAfter(dataDeHoje) && element.inicio.isBefore(dataDeHoje)) || isToday(element.inicio) || isToday(element.fim)).toList();
+
+    print(listaPlantaoAux.length);
     if (listaPlantaoAux.length > 1) {
       farmaciaDePlantao = listaPlantaoAux[1].farmacia;
       plantao = listaPlantaoAux[1];
