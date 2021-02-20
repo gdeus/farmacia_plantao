@@ -8,7 +8,7 @@ class Service {
   List<Farmacia> criaListaFarmacia() {
     //Farmacia(this.nome, this.endereco, this.latitude, this.longitude, this.image, this.telefone);
     List<Farmacia> listaFarmacia = [
-      Farmacia(0, 'Farmácia FarmaVitta', 'Rua Alfredo Chaves, 489 - Centro', '-25.343563', '-54.243239', 'images/farmaVitta.png', '(45) 3565-7587'),
+      Farmacia(0, 'Farmácia Brava', 'Rua Farroupilha, 271, Centro', '-25.344945', '-54.239454', 'images/brava.png', '(45) 3565-2963'),
       Farmacia(1, 'Farmácia N. Sª Aparecida', 'R. Castro Alves, 308 - Centro', '-25.346668', '-54.242351', 'images/nossaSenhora.png', '(45) 3565-1431'),
       Farmacia(2, 'Farmácia Farma Útil', 'Rua Farroupilha', '-25.345917', '-54.240171', 'images/farmaUtil.png', '(45) 3565-1446'),
       Farmacia(3, 'Farmácia Farma Amboni', 'Rua Farroupilha', '-25.344041', '-54.239445', 'images/amboni.png', '(45) 3565-1747'),
@@ -22,6 +22,7 @@ class Service {
       Farmacia(11, 'Farmácia Farma e Vida', 'R. Duque de Caxias, 910', '-25.345689', '-54.241427', 'images/farmaVida.png', '(45) 3565-2753'),
       Farmacia(12, 'Farmácia Preço Baixo', 'Rua Farroupilha 77, Centro', '-25.344482', '-54.239502', 'images/preco.png', '(45) 3565-1760'),
       Farmacia(13, 'Farmácia ItaFarma', 'Rua Alfredo Chaves, 99, Centro', '-25.344945', '-54.239454', 'images/itafarma.png', '(45) 3565-6029'),
+      Farmacia(14, 'Farmácia FarmaVitta', 'Rua Alfredo Chaves, 489 - Centro', '-25.346621', '-54.2418886', 'images/farmaVitta.png', '(45) 3565-7587'),
     ];
 
     return listaFarmacia;
@@ -29,12 +30,12 @@ class Service {
   //Plantao(this.inicio, this.fim, this.farmacia);
   List<Plantao> criaListaPlantao(){
     List<Farmacia> listaFarmacia = criaListaFarmacia();
-    Plantao plantao = new Plantao(DateTime.parse('2020-01-18'), DateTime.parse('2020-01-25'), listaFarmacia[0]);
-    if(listaPlantao.length < 57){
+    Plantao plantao = new Plantao(DateTime.parse('2021-02-20'), DateTime.parse('2021-02-27'), listaFarmacia[0]);
+    if(listaPlantao.length < 46){
       listaPlantao.add(plantao);
-      for(int i=1;i<=56;i++){
+      for(int i=1;i<=45;i++){
         aux = aux + 1;
-        if(aux>=14){
+        if(aux>=15){
           aux = 0;
           print('entrei aqui');
         }

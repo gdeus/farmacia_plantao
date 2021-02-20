@@ -52,7 +52,7 @@ class _FindScreenState extends State<FindScreen> {
       children: <Widget>[
         RaisedButton(
           onPressed: (){
-            DatePicker.showDatePicker(context, showTitleActions: true, minTime: DateTime(2020, 1, 18), maxTime: DateTime(2021, 2, 13), locale: LocaleType.pt,
+            DatePicker.showDatePicker(context, showTitleActions: true, minTime: DateTime(2021, 2, 20), maxTime: DateTime(2022, 1, 8), locale: LocaleType.pt,
                 onChanged: (date){
                   data = date;
                 },
