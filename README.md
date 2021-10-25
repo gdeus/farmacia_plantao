@@ -1,16 +1,10 @@
-# farmaciaplantao
+# Farmácia de Plantão
 
-A new Flutter application.
+Aplicação feita em Flutter para mostrar a Farmácia de Plantão em minha cidade; 
 
-## Getting Started
+## Imagens
+![image](https://user-images.githubusercontent.com/13950034/138733652-86ddea27-bc40-4225-b3c0-a001d485f003.png)
+![image](https://user-images.githubusercontent.com/13950034/138733676-8cc1b46d-d8e4-4b73-8ce4-0d2d35647204.png)
+![image](https://user-images.githubusercontent.com/13950034/138733699-13837372-3fca-4bb2-bbb3-65f71bcdea40.png)
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
